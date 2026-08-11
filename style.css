@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b0d1e,
+            #6b1834,
+            #24000d
+        );
+
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #e8cbd4;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #f4dce3;
+}
+
+input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #333;
+
+    font-size: 15px;
+}
+
+input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 180, 200, 0.4);
+}
+
+button {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #d6336c;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b92759;
+    transform: translateY(-2px);
+}
+
+.result {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    background: rgba(46, 204, 113, 0.2);
+
+    border: 1px solid rgba(46, 204, 113, 0.5);
+}
+
+.result h2 {
+    margin-bottom: 10px;
+}
+
+.result p {
+    margin: 5px;
+    font-size: 18px;
+}
+
+.error {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background: rgba(231, 76, 60, 0.25);
+
+    color: #ffd4d0;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}

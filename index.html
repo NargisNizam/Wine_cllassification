@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wine Classifier</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>🍷 Wine Classifier</h1>
+
+        <p class="subtitle">
+            Enter wine features to predict its class
+        </p>
+
+        <form id="predictionForm">
+
+            <div class="grid">
+
+                <div class="input-group">
+                    <label>Alcohol</label>
+                    <input type="number" step="any" id="alcohol" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Malic Acid</label>
+                    <input type="number" step="any" id="malic_acid" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Ash</label>
+                    <input type="number" step="any" id="ash" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Alcalinity of Ash</label>
+                    <input type="number" step="any" id="alcalinity_of_ash" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Magnesium</label>
+                    <input type="number" step="any" id="magnesium" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Total Phenols</label>
+                    <input type="number" step="any" id="total_phenols" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Flavanoids</label>
+                    <input type="number" step="any" id="flavanoids" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Nonflavanoid Phenols</label>
+                    <input type="number" step="any" id="nonflavanoid_phenols" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Proanthocyanins</label>
+                    <input type="number" step="any" id="proanthocyanins" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Color Intensity</label>
+                    <input type="number" step="any" id="color_intensity" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Hue</label>
+                    <input type="number" step="any" id="hue" required>
+                </div>
+
+                <div class="input-group">
+                    <label>OD280/OD315</label>
+                    <input type="number" step="any" id="od280_od315" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Proline</label>
+                    <input type="number" step="any" id="proline" required>
+                </div>
+
+            </div>
+
+            <button type="submit">
+                Predict Wine Class
+            </button>
+
+        </form>
+
+        <div id="result" class="result hidden">
+            <h2>Prediction Result</h2>
+            <p id="prediction"></p>
+            <p id="confidence"></p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
